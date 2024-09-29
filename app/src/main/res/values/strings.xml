@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">Hello world</string>
+    <string-array name="daftar_mhs">
+        <item>Taufiqur Rahman</item>
+        <item>Reo Arya Yudha</item>
+        <item>Dendi Aprilio Setiawan</item>
+        <item>Faradila Ayu Lestari</item>
+        <item>Dheden Sandika</item>
+        <item>Muhammad Hasan Kamil</item>
+        <item>Sagita Putri Agustin</item>
+        <item>Muhammad Nor Kholit</item>
+        <item>Mafira Aurelia Salsabila Firdaus</item>
+        <item>Muhammad Solli</item>
+        <item>Alief Chandra Darmawan</item>
+        <item>Raihan Rais Arrum</item>
+        <item>Muhammad Farhan Maulana</item>
+        <item>Raffi Arganta Viari</item>
+        <item>Septian Galoh Prasetyo</item>
+        <item>Wahyu Ananda</item>
+    </string-array>
+
+    <string-array name="Alamat">
+        <item>Bondowoso</item>
+        <item>Banyuwangi</item>
+        <item>Banyuwangi</item>
+        <item>Bondowoso</item>
+        <item>Bondowoso</item>
+        <item>Bondowoso</item>
+        <item>Bondowoso</item>
+        <item>Bondowoso</item>
+        <item>Jember</item>
+        <item>Bondowoso</item>
+        <item>Jember</item>
+        <item>Bondowoso</item>
+        <item>Bondowoso</item>
+        <item>Bondowoso</item>
+        <item>Bondowoso</item>
+        <item>Bondowoso</item>
+    </string-array>
+
+    <string-array name="email">
+        <item>fiqo@gmail.com</item>
+        <item>Rreo@gmail.com</item>
+        <item>dendi@gmail.com</item>
+        <item>adel@gmail.com</item>
+        <item>dheden@gmail.com</item>
+        <item>kamil@gmail.com</item>
+        <item>dagita@gmail.com</item>
+        <item>kholit@gmail.com</item>
+        <item>mafir@gmail.com</item>
+        <item>solli@gmail.com</item>
+        <item>alief@gmail.com</item>
+        <item>raihan@gmail.com</item>
+        <item>farhan@gmail.com</item>
+        <item>raffi@gmail.com</item>
+        <item>tyo@gmail.com</item>
+        <item>wahyu@gmail.com</item>
+    </string-array>
+</resources>
