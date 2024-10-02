@@ -27,7 +27,7 @@ public class ListMHSActivity extends AppCompatActivity implements AdapterView.On
 
         adapter = ArrayAdapter.createFromResource(this,
                 R.array.daftar_mhs,
-                androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+                android.R.layout.simple_spinner_dropdown_item);
         lsmhs.setAdapter(adapter);
         lsmhs.setOnItemClickListener(this);
     }
