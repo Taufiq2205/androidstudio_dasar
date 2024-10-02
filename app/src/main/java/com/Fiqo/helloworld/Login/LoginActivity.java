@@ -16,11 +16,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.Fiqo.helloworld.DashboardActivity;
 import com.Fiqo.helloworld.DataMHSActivity;
 import com.Fiqo.helloworld.ListMHSActivity;
 import com.Fiqo.helloworld.R;
 
 public class LoginActivity extends AppCompatActivity {
+
+    //deklarasi variabel
     EditText editemail, editpassword;
     private Button button;
     String fullname;
@@ -40,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         EditText edtPasswordLogin = findViewById(R.id.txt_password);
         Button btnlogin = findViewById(R.id.btn_login);
 
+        //mengambil intent dan nilai
         Bundle extras = getIntent().getExtras();
         fullname = extras.getString("FULLNAME");
         username = extras.getString("USERNAME");
@@ -61,8 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                     Bundle extras = getIntent().getExtras();
                     String emailVal = (extras != null) ? extras.getString("EMAIL") : "";
                     String passwordVal = (extras != null) ? extras.getString("PASSWORD") : "";
-                    Log.d("hhh", "h"+passwordVal);
-                    Intent intent = new Intent(LoginActivity.this, DataMHSActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, DashboardActivity.class);
 
                     if (email.getText().toString().equals(emailVal) && password.getText().toString().equals(passwordVal)) {
                         Toast.makeText(LoginActivity.this, "ANDA BERHASIL LOGIN", Toast.LENGTH_SHORT).show();
@@ -73,13 +76,6 @@ public class LoginActivity extends AppCompatActivity {
                                 .setTitle("ANNOUNCEMENT")
                                 .setMessage("YOUR EMAIL OR PASSWORD IS INCORRECT")
                                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        Intent intent = new Intent(LoginActivity.this, ListMHSActivity.class);
-                                        startActivity(intent);
-                                        finish();
-                                    }
-                                })
-                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int which) {
                                         dialog.dismiss();
                                     }

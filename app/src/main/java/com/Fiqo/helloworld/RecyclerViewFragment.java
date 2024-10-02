@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -17,7 +19,7 @@ import android.view.ViewGroup;
  */
 public class RecyclerViewFragment extends Fragment {
 
-
+    //inisialisasi variabel
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager layoutManager;
@@ -74,7 +76,7 @@ public class RecyclerViewFragment extends Fragment {
         // Mengatur agar ukuran RecyclerView tetap tetap
         recyclerView.setHasFixedSize(true);
 
-        // Menggunakan LinearLayoutManager untuk RecyclerView
+        // Menggunakan LinearLayoutManager untuk RecyclerView(mengatur tata letak)
         layoutManager = new LinearLayoutManager(requireContext());
         recyclerView.setLayoutManager(layoutManager);
 

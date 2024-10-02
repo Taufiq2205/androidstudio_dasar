@@ -71,7 +71,7 @@ public class RegisterActivity extends AppCompatActivity {
                         if (motionEvent.getRawX() >= (editpassword.getRight() - drawableEndWidth)) {
                             // Mengganti visibilitas password
                             if (isPasswordVisible[0]) {
-                                // Jika password terlihat, sembunyikan
+                                // Jika password terlihat, sembunyikan. dan menyembunyikan text and hide text
                                 editpassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
                                 editpassword.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_lock_24, 0, R.drawable.baseline_visibility_off_24, 0);
                                 isPasswordVisible[0] = false;
@@ -81,8 +81,6 @@ public class RegisterActivity extends AppCompatActivity {
                                 editpassword.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_lock_24, 0, R.drawable.baseline_visibility_24, 0);
                                 isPasswordVisible[0] = true;
                             }
-                            // Menempatkan kursor di akhir teks
-                            editpassword.setSelection(editpassword.getText().length());
                             return true;  // Menandakan bahwa event telah diproses
                         }
                     }
@@ -114,8 +112,6 @@ public class RegisterActivity extends AppCompatActivity {
                                 editPassword1.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_lock_24, 0, R.drawable.baseline_visibility_24, 0);
                                 isConfirmPasswordVisible[0] = true;
                             }
-                            // Menempatkan kursor di akhir teks
-                            editPassword1.setSelection(editPassword1.getText().length());
                             return true;  // Menandakan bahwa event telah diproses
                         }
                     }

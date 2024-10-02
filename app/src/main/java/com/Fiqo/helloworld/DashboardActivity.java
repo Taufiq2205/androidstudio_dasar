@@ -26,11 +26,12 @@ public class DashboardActivity extends AppCompatActivity implements BottomNaviga
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
 
         bottomNavigationView.setOnItemSelectedListener(this);
-        bottomNavigationView.setSelectedItemId(R.id.datamhs);
+        bottomNavigationView.setSelectedItemId(R.id.listmhs);
     }
 
     ListViewFragment listViewFragment = new ListViewFragment();
     RecyclerViewFragment recyclerViewFragment = new RecyclerViewFragment();
+    OtherFragment otherFragment = new OtherFragment();
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -46,6 +47,12 @@ public class DashboardActivity extends AppCompatActivity implements BottomNaviga
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.framelayout, recyclerViewFragment)
+                    .commit();
+            return true;
+        } else if (itemId == R.id.other) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.framelayout, otherFragment)
                     .commit();
             return true;
         } else {
