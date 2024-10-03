@@ -1,7 +1,9 @@
 package com.Fiqo.helloworld.Login;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -33,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     String tanggal;
     String notelp;
     String alamat;
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +45,13 @@ public class LoginActivity extends AppCompatActivity {
         EditText edtEmailLogin = findViewById(R.id.txt_email);
         EditText edtPasswordLogin = findViewById(R.id.txt_password);
         Button btnlogin = findViewById(R.id.btn_login);
-
+        //setting shared pref
+        sharedPreferences = this.getSharedPreferences("Setting", Context.MODE_PRIVATE);
+        //checking sudah login apa belum
+        boolean isLogin = sharedPreferences.getBoolean("islogin",false);
+        if(isLogin){
+            startActivity(new Intent(this,DashboardActivity.class));
+        }
         //mengambil intent dan nilai
         Bundle extras = getIntent().getExtras();
         fullname = extras.getString("FULLNAME");
@@ -69,6 +78,10 @@ public class LoginActivity extends AppCompatActivity {
 
                     if (email.getText().toString().equals(emailVal) && password.getText().toString().equals(passwordVal)) {
                         Toast.makeText(LoginActivity.this, "ANDA BERHASIL LOGIN", Toast.LENGTH_SHORT).show();
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("email",emailVal);
+                        editor.putBoolean("islogin",true);
+                        editor.apply();
                         startActivity(intent);
                         finish();
                     } else {
